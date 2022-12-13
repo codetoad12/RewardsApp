@@ -1,0 +1,57 @@
+
+<h1 class="AdminHeader">Hello Admin</h1>
+
+<div class="sidebar">
+
+    <li><a href='#'><button>Home</button> </a></li>
+    <li><a href="#"><button>Add Apps</button></li>
+
+</div>
+
+<div class="AdminForm">
+    <form method="POST" class="AdminPost" action="">
+        {%csrf_token%}
+        <input type="text" placeholder="App Name" name="app_name">
+        <input type="text" placeholder="App Link" name="app_link">
+        <div class="line">
+        <select name="Category" aria-placeholder="App Category" name="app_cat">
+            <option value="Entertainment">Entertainment</option>
+            <option value="News">News</option>
+            <option value="Sports">Sports</option>
+        </select>
+
+        <select name="subCategory" aria-placeholder="Sub Category" name="app_subcat">
+            <option value="Social Media">Social Media</option>
+            <option value="Knowledge">Knowledge</option>
+            <option value="Fan App">Fan App</option>    
+        </select>
+        <button type="Submit">Submit</button>
+    </form>
+</div>
+
+<style>
+    .AdminHeader{text-align: center;}
+    
+    .sidebar{
+            position: fixed;
+            background: silver;
+            width: 200px;
+            height: 100%;
+            line-height: 2;
+            top: 100px;
+            left: 0;
+            z-index: 1;
+            }
+       .AdminForm{
+                position: relative;
+                background:white;
+                left: 25%;
+                top: 100px;
+                z-index: 1;
+            }
+        .line{
+            position:relative;
+            line-height: 3;
+        }
+    
+</style>
